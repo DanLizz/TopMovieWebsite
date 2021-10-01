@@ -11,16 +11,9 @@
 {% block title %}Edit Movies{% endblock %}
 
 {% block content %}
-<div class="content">
-  <h1 class="heading">{{ movie.title }}</h1>
-    <p class="description">Edit Movie Rating</p>
-    <form class="col-4" action="{{ url_for('edit') }}" method="POST">
-        <input hidden="hidden" name="id" value="{{movie.id}}">
-        <label class="form-label label-p">Your Rating out of 10</label>
-        <input class="form-control" name="rating" type="text" placeholder="New Rating">
-        <label class="form-label label-p">Your Review</label>
-        <input class="form-control" name="review" type="text" placeholder="New Review">
-        <button class="btn btn-success done-b" type="submit" href="url_for('home')">Done</button>
-    </form>
-  </div>
+    <div class="content">
+      <h1 class="heading">{{movie.title}}</h1>
+        <p class="description">Edit Movie Rating</p>
+            {{ wtf.quick_form(form, novalidate=True) }}
+    </div>
 {% endblock %}
