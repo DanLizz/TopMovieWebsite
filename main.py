@@ -9,7 +9,7 @@ import requests
 MOVIE_DB_SEARCH_URL = "https://api.themoviedb.org/3/search/movie"
 MOVIE_DB_INFO_URL = "https://api.themoviedb.org/3/movie"
 MOVIE_DB_IMG_URL = "https://image.tmdb.org/t/p/w500"
-API_KEY = YOUR_API_KEY
+API_KEY = "4a3fd5eafa6965c8741cedd799b603b6"
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
